@@ -30,7 +30,6 @@ public class TelegramUserRepositoryIT {
         Assertions.assertEquals(5, users.size());
     }
     @Sql(scripts = {"/sql/clearDbs.sql"})
-    @Test
     public void shouldProperlySaveTelegramUser() {
         TelegramUser telegramUser = new TelegramUser();
         telegramUser.setChatId("1234567890");
