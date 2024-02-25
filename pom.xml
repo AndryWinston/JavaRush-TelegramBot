@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.AlexeyKalitin</groupId>
 	<artifactId>javarush-telegrambot</artifactId>
-	<version>0.4.0</version>
+	<version>0.4.1</version>
 	<name>JavaRush Telegram bot</name>
 	<description>Telegram bot for Javarush from community to community </description>
 	<properties>
