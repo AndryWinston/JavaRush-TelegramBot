@@ -12,11 +12,9 @@ services:
       BOT_DB_USERNAME: ${BOT_DB_USERNAME}
       BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
     restart: always
-
   jrtb-db:
     image: mysql:5.7
     restart: always
-    container_name: dev-jrtb-db
     environment:
       MYSQL_USER: ${BOT_DB_USERNAME}
       MYSQL_PASSWORD: ${BOT_DB_PASSWORD}

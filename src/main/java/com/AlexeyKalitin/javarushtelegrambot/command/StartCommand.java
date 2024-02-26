@@ -19,15 +19,17 @@ public class StartCommand implements Command {
     public void execute(Update update) {
         String chatId = update.getMessage().getChatId().toString();
 
-        telegramUserService.findByChatId(chatId).ifPresentOrElse(user -> {
-            user.setActive(true);
-            telegramUserService.save(user);
-        }, () -> {
-            TelegramUser telegramUser = new TelegramUser();
-            telegramUser.setActive(true);
-            telegramUser.setChatId(chatId);
-            telegramUserService.save(telegramUser);
-        });
+        telegramUserService.findByChatId(chatId).ifPresentOrElse(
+                user -> {
+                    user.setActive(true);
+                    telegramUserService.save(user);
+                },
+                () -> {
+                    TelegramUser telegramUser = new TelegramUser();
+                    telegramUser.setActive(true);
+                    telegramUser.setChatId(chatId);
+                    telegramUserService.save(telegramUser);
+                });
         sendBotMessageService.sendMessage(chatId, START_MESSAGE);
     }
 }
