@@ -2,7 +2,6 @@ package com.AlexeyKalitin.javarushtelegrambot;
 
 import com.AlexeyKalitin.javarushtelegrambot.repository.TelegramUserRepository;
 import com.AlexeyKalitin.javarushtelegrambot.repository.entity.TelegramUser;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
